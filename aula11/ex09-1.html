@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASILEIRO OU GRINGO</title>
+</head>
+<body>
+    <H1> Verificação de Nacionalidade</H1>
+    Em que país você nasceu?: <input type="" name="txtNa" id="txtNa">
+    <input type="button" value="Consultar" onclick ="processar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function processar (){
+            var Na = document.getElementById ('txtNa')
+            var res = document.getElementById ('res')
+            var NaF = Na.value
+            res.innerHTML= `<p> Sua Nacionalidade é <strong>${NaF}</strong></p>`
+
+                if (NaF == 'brasil' || NaF == 'Brasil'){
+                    res.innerHTML += `<p> Você é Brasileiro, que sorte a sua :D</p>`
+                } else{
+                    res.innerHTML += `<p> Infelizmente você não é Brasileiro. Sinto muito :(</p>`
+
+                }
+                
+
+        }
+    </script>
+</body>
+</html>
+
+<!-- Condição composta
+
+var pais = 'Brasil'
+console.log (`Vivendo em ${pais}`)
+if (pais == 'Brasil'){
+    console.log (' Você é Brasileiro')
+} else {
+    console.log ('Você é estrangeiro')
+}
+-->
